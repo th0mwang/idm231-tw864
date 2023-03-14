@@ -8,19 +8,27 @@
     <script scr="main page.js"></script>
     <link scr="javascript" href="/main page.js">
     <title>Document</title>
-   <center>
-    <h1>What Pokemon type are you?</h1>
-    <!--output type-->
-</center>
+    <script type="text/javascript">
+function fn1(){
+    var str = document.getElementById("Month").value;
+    alert(str)
+    console.log(str)
+}
+
+    </script>
+  
 </head>
 <body>
     <center>
+        <h1>What Pokemon type are you?</h1>
+        <!--output type-->
+    </center>
+    <center>
         <p1>Enter your birthday to find out!</p1><br><br>
 <form>
-    <p1>Month</p1><input type="text"name="Month">
-    <p1>Day</p1><input type="text"name="Day"><br><br>
-    <button type="submit">    <input type="button" value="Check Type"/>
-    </button>
+    <p1>Month</p1><input id="Month"name="Month">
+    <p1>Day</p1><input id="Day" name="Day"><br><br>
+    <button onClick="fn1()" id = "btn1">Submit</button>
     <p></p>
 </form>
 
@@ -28,6 +36,5 @@
 
        <br><br> <img src="Type.png" alt="pokemon types">
     </center>
-    <script>main page.js</script>
 </body>
 </html>
