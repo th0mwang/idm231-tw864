@@ -1,20 +1,33 @@
 body{
+    align-items: center;
     background-color: #4F9C93;
 }
 h1{
     color: beige;
     font-family: 'a Big Deal', sans-serif;
     font-size: 450%;
-  
+    text-align: center;
 }
 p1{
     color: beige;
     font-family: 'a Big Deal', sans-serif;
-    
-
+    text-align: center;
 }
 p2{
     color: beige;
     font-family: 'a Big Deal', sans-serif;
     font-size: 200%;
+    text-align: center;
+}
+img{
+    width:15%;
+}
+image{
+    width: 75%;
+}
+.flex-container{
+    align-items:  baseline;
+    display: flex;
+    flex-direction: column;
+    
 }

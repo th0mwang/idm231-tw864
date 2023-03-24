@@ -1,6 +1,12 @@
-const button = document.querySelector('input');
-const paragraph = document.querySelector('p');
-
+const storageInput =  document.querySelector('.storage');
+const text = document.querySelector('.text');
+const button = document.querySelector('.button');
+const paragraph = document.querySelector('.p');
+const audio = new Audio('sfx/who.mp3')
+storageInput.addEventListener('input', letter => {
+    text.textContent = letter.target.value
+})
+//how it works  
 button.addEventListener('click', updateButton);
 function updateButton() 
     {
@@ -55,24 +61,23 @@ function updateButton()
     }
     }
     else if (Month == "July"){
-        if (Day <= 19){}
-        your_typing = "Grass";
+        if (Day <= 19){
+            your_typing = "Grass";
+        }
         }
         else{
         your_typing = "Ground";
         }
-    }
+    
     else if (Month == "August"){
         if (Day <= 8){
         your_typing = "Ground";
         }
-        if (Day >=9 && <=28){
-        your_typing = "Ice";
         }
         else {
         your_typing = "Normal";
         }
-    }
+    
     else if (Month = "September"){
         if (Day <= 17){
         your_typing = "Normal"
@@ -85,7 +90,7 @@ function updateButton()
         if (Day <= 7){
         your_typing = "Poison";
         }
-        if (Day >=8 && <= 27){
+        if (Day >=8 ){
         your_typing = "Psychic";
         }
         else{
@@ -109,4 +114,4 @@ function updateButton()
         }
     }
     document.write (your_typing);
-}
+    }
