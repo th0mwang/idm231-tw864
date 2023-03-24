@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
     <link rel="stylesheet" href="style sheet main page.css">
     <link href="https://fonts.cdnfonts.com/css/a-big-deal" rel="stylesheet">
     <script scr="main page.js"></script>
@@ -14,27 +16,160 @@ function fn1(){
     alert(str)
     console.log(str)
 }
-
     </script>
-  
 </head>
-<body>
-    <center>
-        <h1>What Pokemon type are you?</h1>
-        <!--output type-->
-    </center>
-    <center>
-        <p1>Enter your birthday to find out!</p1><br><br>
+<header>   
+    <div style="text-align:center">
+    <h1>What Pokemon type are you?</h1>
+    <!--output type-->
+   
+    <p1>Enter your birthday to find out!</p1><br><br>
 <form>
-    <p1>Month</p1><input id="Month"name="Month">
-    <p1>Day</p1><input id="Day" name="Day"><br><br>
-    <button onClick="fn1()" id = "btn1">Submit</button>
-    <p></p>
+<input id="birthdayInput" class="js-date-input" type="date" name="birthday">
+<br><br>
+<button class="submit-button" type="button">Submit</button>
 </form>
+</div>
+</header>
+<body>
+ <main>
+    <div class="flex-container">
+    <div class="Bug">
+        <div class="box">
+            <img src="/types/bug.png">
+            <button class="bug-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Dark">
+        <div class="box">
+            <img src="/types/dark.png">
+            <button class="dark-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Dragon">
+        <div class="box">
+            <img src="/types/dragon.png">
+            <button class="dragon-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Electric">
+        <div class="box">
+            <img src="/types/Pokémon_Electric_Type_Icon.svg.png">
+            <button class="elec-button" type="button">More Info</button>
+
+        </div>
+    </div>
+
+    <div class="Fairy">
+        <div class="box">
+            <img src="/types/Pokémon_Fairy_Type_Icon.svg.png">
+            <button class="fairy-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Fighting">
+        <div class="box">
+            <img src="/types/Pokémon_Fighting_Type_Icon.svg.png">
+            <button class="fight-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Fire">
+        <div class="box">
+            <img src="/types/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png">
+            <button class="fire-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Flying">
+        <div class="box">
+            <img src="/types/flying_type_symbol_galar_by_jormxdos_dffvl6n-pre.png">
+            <button class="fly-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Ghost">
+        <div class="box">
+            <img src="/types/ghost_type_symbol_galar_by_jormxdos_dffvl2d-fullview.png">
+            <button class="ghost-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Grass">
+        <div class="box">
+            <img src="/types/grass_type_symbol_galar_by_jormxdos_dffvl0s-fullview.png">
+            <button class="grass-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Ground">
+        <div class="box">
+            <img src="/types/1200px-Pokémon_Ground_Type_Icon.svg.png">
+            <button class="ground-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Ice">
+        <div class="box">
+            <img src="/types/480px-Pokémon_Ice_Type_Icon.svg.png">
+            <button class="ice-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Normal">
+        <div class="box">
+            <img src="/types/1024px-Pokémon_Normal_Type_Icon.svg.png">
+            <button class="norm-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Poison">
+        <div class="box">
+            <img src="/types/Pokémon_Poison_Type_Icon.svg.png">
+            <button class="poison-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Psychic">
+        <div class="box">
+            <img src="/types/1024px-Pokémon_Psychic_Type_Icon.svg.png">
+            <button class="psychic-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Rock">
+        <div class="box">
+            <img src="/types/1200px-Pokémon_Rock_Type_Icon.svg.png">
+            <button class="rock-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Steel">
+        <div class="box">
+            <img src="/types/Pokémon_Steel_Type_Icon.svg.png">
+            <button class="steel-button" type="button">More Info</button>
+        </div>
+    </div>
+
+    <div class="Water">
+        <div class="box">
+            <img src="/types/1024px-Pokémon_Water_Type_Icon.svg.png">
+            <button class="water-button" type="button">More Info</button>
+        </div>
+    </div>
 
 
 
-       <br><br> <img src="Type.png  " alt="pokemon types">
-    </center>
+
+
+
+
+
+</div>
+
+ </main>
 </body>
 </html>
