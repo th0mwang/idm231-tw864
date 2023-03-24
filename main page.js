@@ -1,117 +1,80 @@
-const storageInput =  document.querySelector('.storage');
-const text = document.querySelector('.text');
-const button = document.querySelector('.button');
-const paragraph = document.querySelector('.p');
-const audio = new Audio('sfx/who.mp3')
-storageInput.addEventListener('input', letter => {
-    text.textContent = letter.target.value
-})
-//how it works  
-button.addEventListener('click', updateButton);
-function updateButton() 
-    {
-        let your_typing="";
-    
-    if (Month == January){
-        if (Day <= 20){
-        your_typing = "Bug";
-        }
-        else{
-        your_typing = "Dark";
-        }
-    }
-    else if (Month == February){
-        if (Day <= 9){
-        your_typing = "Dark";
-        }
-        else{
-        your_typing = "Dragon";
-        }
-    }
-    else if (Month == "March"){
-        if (Day <= 21){
-        your_typing = "ELectric";
-        }
-        else{
-        your_typing = "Fairy";
-        }
-    }
-    else if (Month == "April"){
-        if (Day <= 10){
-        your_typing = "Fairy";
-        }
-        else{
-        your_typing = "Fighting";
-        }
-    }
-    else if (Month == "May"){
-        if (Day <= 20){
-        your_typing = "Fire";
-        }
-        else{
-        your_typing = "Flying";
-        }
-    }
-    else if (Month == "June"){
-        if (Day <= 9){
-        your_typing = "Flying";
-        }
-        else{
-        your_typing = "Ghost";
-    }
-    }
-    else if (Month == "July"){
-        if (Day <= 19){
-            your_typing = "Grass";
-        }
-        }
-        else{
-        your_typing = "Ground";
-        }
-    
-    else if (Month == "August"){
-        if (Day <= 8){
-        your_typing = "Ground";
-        }
-        }
-        else {
-        your_typing = "Normal";
-        }
-    
-    else if (Month = "September"){
-        if (Day <= 17){
-        your_typing = "Normal"
-        }
-        else{
-        your_typing = "Poison";
-        }
-    }
-    else if (Month = "October"){
-        if (Day <= 7){
-        your_typing = "Poison";
-        }
-        if (Day >=8 ){
-        your_typing = "Psychic";
-        }
-        else{
-        your_typing = "Rock"
-        }
-    }
-    else if (Month = "November"){
-        if (Day <= 16){
-        your_typing = "Rock";
-        }
-        else{
-        your_typing = "Steel";
-        }
-    }
-    else if (Month = "December"){
-        if (Day <=6){
-        your_typing = "Steel";
-        }
-        else{
-        your_typing = "Water";
-        }
-    }
-    document.write (your_typing);
+const form=document.querySelector("form");
+const input = document.getElementBy("birthday");
+
+
+function getTypeByCalendar() {
+function getTypeSign(day,month){
+    let typeSign;
+    if((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
+        typeSign = "bug";
+      } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
+        typeSign = "dark";
+      } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+        typeSign = "dragon";
+      } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
+        typeSign = "electric";
+      } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+        typeSign = "fairy";
+      } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+        typeSign = "fighting";
+      } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+        typeSign = "fire";
+      } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+        typeSign = "flying";
+      } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+        typeSign = "ghost";
+      } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
+        typeSign = "grass";
+      } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
+        typeSign = "ground";
+      } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+        typeSign = "ice";
+      }
+      return typeSign;
+}
+
+}
+//turn calendar into seperate month and day variables
+function calculateType() {
+    const birthday = document.getElementById("birthday").value;
+    const day = birthday.split("-")[2];
+    const month = birthday.split("-")[1];
+    const userType = getTypeZodiac(day, month);
+    displayDescription.innerText = descriptions[userSign];
+
+
+}
+
+//show zodiac name
+
+if (userSign === "bug") {
+    bug();
+  } else if (userSign === "dark") {
+    dark();
+  } else if (userSign === "dragon") {
+    dragon();
+  } else if (userSign === "electric") {
+    electric();
+  } else if (userSign === "fairy") {
+    fairy();
+  } else if (userSign === "fighting") {
+    fighting();
+  } else if (userSign === "fire") {
+    fire();
+  } else if (userSign === "flying") {
+    flying();
+  } else if (userSign === "ghost") {
+    ghost();
+  } else if (userSign === "grass") {
+    grass();
+  } else if (userSign === "ground") {
+    ground();
+  } else if (userSign === "ice") {
+    ice();}
+
+
+    //audio
+    function playAudio() {
+      var audio = document.getElementById("audio1");
+      audio.play();
     }
