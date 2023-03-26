@@ -1,10 +1,17 @@
 const form=document.querySelector("form");
 const input = document.getElementBy("birthday");
 
+let prevButton = null;
 
-function getTypeByCalendar() {
-function getTypeSign(day,month){
-    let typeSign;
+//const Submit =document.getElementById ('submit-btn');
+//Submit.addEventListener ('click', function ) {
+  // console.log('submitButton clicked');
+
+//   const birthday = new
+
+function getZodiacByCalendar() {
+  function getZodiacSign(day, month) {
+    let typeSign = "";
     if((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
         typeSign = "bug";
       } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
@@ -30,10 +37,9 @@ function getTypeSign(day,month){
       } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
         typeSign = "ice";
       }
-      return typeSign;
-}
-
-}
+  return typeSign;
+    }
+  }
 //turn calendar into seperate month and day variables
 function calculateType() {
     const birthday = document.getElementById("birthday").value;
@@ -75,9 +81,30 @@ if (userSign === "bug") {
 
     //audio
 
-    const button = document.getElementById('bug');
-    const sound = document.getElementById('buzz');
-    
-    button.addEventListener('click', () => {
-      sound.play();
-    });
+   // Get all the buttons with class "typing"
+const buttons = document.querySelectorAll('.typing');
+
+// Add a click event listener to each button
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Get the audio element associated with this button
+    const audio = button.querySelector('audio');
+    // Play the audio
+    audio.play();
+  });
+});
+
+// descriptors
+const button = document.getElementById('bug');
+
+// Add a click event listener to the button
+button.addEventListener('click', () => {
+  // Create a new text node with the phrase "i love apples"
+  const text = document.createTextNode("i love apples");
+  // Create a new paragraph element to contain the text
+  const paragraph = document.createElement('p');
+  // Add the text node to the paragraph element
+  paragraph.appendChild(text);
+  // Add the paragraph element to the body of the HTML document
+  document.body.appendChild(paragraph);
+});
