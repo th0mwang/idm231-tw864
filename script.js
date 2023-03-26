@@ -89,3 +89,10 @@ if (userSign === "bug") {
 
     showZodiacIcon(zodiacButton);
     playSound(zodiacButton);
+
+    const button = document.getElementById('bug');
+    const sound = document.getElementById('buzz');
+    
+    button.addEventListener('click', () => {
+      sound.play();
+    });
