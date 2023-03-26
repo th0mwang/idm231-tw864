@@ -75,12 +75,9 @@ if (userSign === "bug") {
 
     //audio
 
-    showZodiacIcon(zodiacButton);
-    playSound(zodiacButton);
-
     const button = document.getElementById('bug');
     const sound = document.getElementById('buzz');
-    sound.currentTime = 0;
+    
     button.addEventListener('click', () => {
       sound.play();
     });
