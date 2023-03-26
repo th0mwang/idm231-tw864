@@ -74,7 +74,18 @@ if (userSign === "bug") {
 
 
     //audio
-    function playAudio() {
-      var audio = document.getElementById("audio1");
-      audio.play();
+    function playSound(zodiacButton) {
+      const sound = document.getElementById(zodiacButton.dataset.sound);
+      sound.currentTime = 0;
+      if (currentSound) {
+        currentSound.pause();
+      }//delete sound when another button is click
+      sound.play();
+      currentSound = sound;
+      setTimeout(function() {
+        sound.pause();
+      }, 5000);
     }
+
+    showZodiacIcon(zodiacButton);
+    playSound(zodiacButton);

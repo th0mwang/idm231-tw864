@@ -29,9 +29,19 @@ img{
  
 }
 button {
-  border: none;
-  cursor: pointer;
-  appearance: none;
-  background-color: inherit;
+  background-color: #2a524d;
+  color: beige;
+  display: inline-block;
 }
 
+.typing{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
