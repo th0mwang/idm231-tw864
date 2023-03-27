@@ -30,6 +30,9 @@ function zodiac(){
       document.getElementById("trait").innerHTML="The Dark type is represented from traits that are considered feral and untameable, specifically that born from adverse and intense complex social conditions";
 
     }
+    if (birthmonth == 2&& birthday > 29){
+      document.getElementById("trait").innerHTML="Invalid Birthday";
+    }
 
     if (birthmonth == 3&& birthday >= 21 || birthmonth == 4 && birthday <= 19){
       result = ("dragon");
