@@ -42,6 +42,9 @@ function zodiac(){
       document.getElementById("characteristic").innerHTML="Dragon type Pokémon are generally rather rare in Pokémon games, and some are even considered to be Mythical Pokémon due to such rare sightings of them; indeed, Dratini was long thought to be extinct.";
 
   }
+
+
+
 }
 
 
@@ -70,3 +73,48 @@ function zodiac(){
         var music = new Audio('sfx/Roar.mp3');
         music.play();
         }
+
+        function playzap(){
+          var music = new Audio('sfx/Zap.mp3');
+          music.play();
+          }
+
+          function playsparkle(){
+            var music = new Audio('sfx/Sparkle Sound Effect.mp3');
+            music.play();
+            }
+
+            function playhit(){
+              var music = new Audio('sfx/Punch Sound Effect.mp3');
+              music.play();
+              }
+
+              function playflame(){
+                var music = new Audio('sfx/Fire Sound Effect.mp3');
+                music.play();
+                }
+
+                function playwind(){
+                  var music = new Audio('sfx/Wind Sound FX.mp3');
+                  music.play();
+                  }
+
+                  function playboo(){
+                    var music = new Audio('sfx/Boo.mp3');
+                    music.play();
+                    }
+
+                    function playlawn(){
+                      var music = new Audio('sfx/Grass.mp3');
+                      music.play();
+                      }
+
+                      function playearth(){
+                        var music = new Audio('sfx/Taco Bell.mp3');
+                        music.play();
+                        }
+
+                        function playcrack(){
+                          var music = new Audio('sfx/Ice.mp3');
+                          music.play();
+                          }
