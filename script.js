@@ -1,110 +1,72 @@
-const form=document.querySelector("form");
-const input = document.getElementBy("birthday");
+function zodiac(){
+  console.log("test 1")
+  birthmonth = 
+  document.getElementById("month").value;
+  var birthday =
+  document.getElementById("day").value;
+  var result = "invalid date entered";
 
-let prevButton = null;
 
-//const Submit =document.getElementById ('submit-btn');
-//Submit.addEventListener ('click', function ) {
-  // console.log('submitButton clicked');
+  if (birthmonth == 1&& birthday >= 20 || birthmonth == 2 && birthday <= 18){
+        result = ("bug");
 
-//   const birthday = new
+        var music = new Audio('sfx/Crickets Chirping Sound Effect.mp3');
+        music.play();
+        
+        document.getElementById("photo").innerHTML="<img src=types/bug.png>";
 
-function getZodiacByCalendar() {
-  function getZodiacSign(day, month) {
-    let typeSign = "";
-    if((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
-        typeSign = "bug";
-      } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
-        typeSign = "dark";
-      } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-        typeSign = "dragon";
-      } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
-        typeSign = "electric";
-      } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
-        typeSign = "fairy";
-      } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
-        typeSign = "fighting";
-      } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
-        typeSign = "fire";
-      } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
-        typeSign = "flying";
-      } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
-        typeSign = "ghost";
-      } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
-        typeSign = "grass";
-      } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
-        typeSign = "ground";
-      } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-        typeSign = "ice";
-      }
-  return typeSign;
+        document.getElementById("characteristic").innerHTML="Bug-type Pokémon are characterized by their fast growing, as they don't take long to evolve. Bug-type Pokémon live mostly (not all of them) in forests, some of them are a little harder to find because they live atop the trees.";
+
     }
+  
+    if (birthmonth == 2&& birthday >= 19 || birthmonth == 3&& birthday <= 20){
+      result = ("dark");
+
+      var music = new Audio('sfx/Dark Souls.mp3');
+      music.play();
+
+      document.getElementById("photo").innerHTML="<img src =types/dark.png>"
+
+      document.getElementById("characteristic").innerHTML="The Dark type is represented from traits that are considered feral and untameable, specifically that born from adverse and intense complex social conditions";
+
+    }
+
+    if (birthmonth == 3&& birthday >= 21 || birthmonth == 4 && birthday <= 19){
+      result = ("dragon");
+
+      var music = new Audio('sfx/Roar.mp3');
+      music.play();
+
+      document.getElementById("photo").innerHTML="<img src=types/bug.png>";
+
+      document.getElementById("characteristic").innerHTML="Dragon type Pokémon are generally rather rare in Pokémon games, and some are even considered to be Mythical Pokémon due to such rare sightings of them; indeed, Dratini was long thought to be extinct.";
+
   }
-//turn calendar into seperate month and day variables
-function calculateType() {
-    const birthday = document.getElementById("birthday").value;
-    const day = birthday.split("-")[2];
-    const month = birthday.split("-")[1];
-    const userType = getTypeZodiac(day, month);
-    displayDescription.innerText = descriptions[userSign];
-
-
 }
 
-//show zodiac name
 
-if (userSign === "bug") {
-    bug();
-  } else if (userSign === "dark") {
-    dark();
-  } else if (userSign === "dragon") {
-    dragon();
-  } else if (userSign === "electric") {
-    electric();
-  } else if (userSign === "fairy") {
-    fairy();
-  } else if (userSign === "fighting") {
-    fighting();
-  } else if (userSign === "fire") {
-    fire();
-  } else if (userSign === "flying") {
-    flying();
-  } else if (userSign === "ghost") {
-    ghost();
-  } else if (userSign === "grass") {
-    grass();
-  } else if (userSign === "ground") {
-    ground();
-  } else if (userSign === "ice") {
-    ice();}
+
+
+
+
+
+
+
 
 
     //audio
 
-   // Get all the buttons with class "typing"
-const buttons = document.querySelectorAll('.typing');
+    function playbuzz(){
+      var music = new Audio('sfx/Crickets Chirping Sound Effect.mp3');
+      music.play();
+      }
 
-// Add a click event listener to each button
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Get the audio element associated with this button
-    const audio = button.querySelector('audio');
-    // Play the audio
-    audio.play();
-  });
-});
+      function playdarksouls(){
+      var music = new Audio('sfx/Dark Souls.mp3');
+      music.play();
+      }
 
-// descriptors
-const button = document.getElementById('bug');
-
-// Add a click event listener to the button
-button.addEventListener('click', () => {
-  // Create a new text node with the phrase "i love apples"
-  const text = document.createTextNode("i love apples");
-  // Create a new paragraph element to contain the text
-  const paragraph = document.createElement('p');
-  // Add the text node to the paragraph element
-  paragraph.appendChild(text);
-  // Add the paragraph element to the body of the HTML document
-  document.body.appendChild(paragraph);
-});
+      function playroar(){
+        var music = new Audio('sfx/Roar.mp3');
+        music.play();
+        }

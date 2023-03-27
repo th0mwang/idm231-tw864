@@ -9,37 +9,42 @@
     <h1>WHAT POKEMON TYPE ARE YOU?</h1>
 
 
-<body>   
+<body>
+
     <div style="text-align:center">
     <!--calendar input-->   
     <p1>Enter your birthday to find out!</p1><br><br>
-<form>
-<input id="birthdayInput" class="js-date-input" type="date" name="birthday">
-<br><br>
-<button id="submit-button">Submit</button>
-</form>
+
+    <p>Month:<input type="number" id="month" min="1" max="12" ></p>
+    <p> Day:<input type="number" id="day" min="1" max="31"></p> 
+ 
+    <button onclick="zodiac()" >Find your Pokemon type! </button>
+
+    <p id="photo"></p>
+    <p id="characteristic"></p>
 <br>
 <button id="assist" class="helper">How to use it</button>
 <br><br>
-
-
-<!--buttons for types-->
 </div>
+
+<p id="traits"></p>
+<!--buttons for types-->
 <div id ="type-list" class="flex-center">
     <div id="types" class="flex-grid">
-    <button id="bug" class="typing" ><img src="types/bug.png" alt="bug type"><audio id="buzz" src="sfx/Crickets Chirping Sound Effect.mp3"></audio></button>
-    <button id="dark"class="typing"><img src="types/dark.png" alt="dark type"><audio id="darksouls" src="sfx/Dark Souls ' You Died ' Sound Effect.mp3"></audio></button>
-    <button id="dragon" class="typing"><img src="types/dragon.png" alt="dragon type"><audio id="roar" src="sfx/Monster Roar sound effect (deleted).mp3"></audio></button>
-    <button id="electric" class="typing"><img src="types/electric.png"><audio id="zap" src="sfx/QUICK ZAP SOUND EFFECT_Free Sound Effect Download.mp3"></audio></button>
+    <button id="bug" class="typing" onclick="playbuzz()"><img src="types/bug.png" alt="bug type"><audio id="buzz" src="sfx/Crickets Chirping Sound Effect.mp3"></audio></button>
+    <button id="dark"class="typing"><img src="types/dark.png" alt="dark type"><audio id="darksouls" src="sfx/Dark Souls.mp3"></audio></button>
+    <button id="dragon" class="typing" onclick="playdarksouls()"><img src="types/dragon.png" alt="dragon type"><audio id="roar" src="sfx/Roar.mp3"></audio></button>
+    <button id="electric" class="typing"><img src="types/electric.png"><audio id="zap" src="sfx/Zap.mp3"></audio></button>
     <button id="fairy" class="typing"><img src="types/fairy.png" alt="fairy type"><audio id="sparkle" src="sfx/Sparkle Sound Effect.mp3"></audio></button>
     <button id="fighting" class="typing"><img src="types/fight.png" alt="fighting type"><audio id="hit" src="sfx/Punch Sound Effect.mp3"></audio></button>
     <button id="fire" class="typing"><img src="types/fire.png" alt="fire type"><audio id="flame" src="sfx/Fire Sound Effect.mp3"></audio></button>
     <button id="flying" class="typing"><img src="types/flying.png" alt="flying type"><audio id="wind" src="sfx/Wind Sound FX.mp3"></audio></button>
-    <button id="ghost" class="typing"><img src="types/ghost.png" alt="ghost type"><audio id="boo" src="sfx/Boo - Sound Effect.mp3"></audio></button>
-    <button id="grass" class="typing"><img src="types/grass.png" alt="grass type"><audio id="lawn" src="sfx/Footsteps Grass Sound Effect (HD).mp3"></audio></button>
-    <button id="ground" class="typing"><img src="types/ground.png" alt="ground type"><audio id="earth" src="sfx/Taco Bell Bong - Sound Effect (HD).mp3"></audio></button>
-    <button id="ice" class="typing"><img src="types/ice.png" alt="ice type"><audio id="crack" src="sfx/Ice cracking - Sound Effect.mp3"></audio></button>
+    <button id="ghost" class="typing"><img src="types/ghost.png" alt="ghost type"><audio id="boo" src="sfx/Boo.mp3"></audio></button>
+    <button id="grass" class="typing"><img src="types/grass.png" alt="grass type"><audio id="lawn" src="sfx/Grass.mp3"></audio></button>
+    <button id="ground" class="typing"><img src="types/ground.png" alt="ground type"><audio id="earth" src="sfx/Taco Bell.mp3"></audio></button>
+    <button id="ice" class="typing"><img src="types/ice.png" alt="ice type"><audio id="crack" src="sfx/Ice.mp3"></audio></button>
    </div>
+   <p id="description"></p>
 </div>
 
    <script src="/script.js"></script>
