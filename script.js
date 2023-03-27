@@ -31,7 +31,7 @@ function zodiac(){
 
     }
 
-    if (birthmonth == 2&& birthday >= 30){
+    if (birthmonth == 2&& birthday > 29){
       result = ("void");
 
       var music = new Audio('sfx/Boowomp.mp3');
