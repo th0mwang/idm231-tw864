@@ -30,7 +30,16 @@ function zodiac(){
       document.getElementById("trait").innerHTML="The Dark type is represented from traits that are considered feral and untameable, specifically that born from adverse and intense complex social conditions";
 
     }
-    if (birthmonth == 2&& birthday > 29){
+
+    if (birthmonth == 2&& birthday >= 30){
+      result = ("void");
+
+      var music = new Audio('sfx/Boowomp.mp3');
+      music.play();
+
+      document.getElementById("photo").innerHTML="<img src =types/sad.png>"
+
+
       document.getElementById("trait").innerHTML="Invalid Birthday";
     }
 
@@ -153,7 +162,7 @@ function zodiac(){
 
       document.getElementById("photo").innerHTML="<img src=types/ice.png>";
 
-      document.getElementById("trait").innerHTML="ce-type Pokémon stand out for being able to endure very low temperatures, as well as adapting to freezing weathers. They control ice at will. Their habitats go from the top of mountains, frozen caves and caverns or even the poles.  Many Ice-type moves have chances of freezing the target, which prevents them from attacking until they thaw out.";
+      document.getElementById("trait").innerHTML="Ice-type Pokémon stand out for being able to endure very low temperatures, as well as adapting to freezing weathers. They control ice at will. Their habitats go from the top of mountains, frozen caves and caverns or even the poles.  Many Ice-type moves have chances of freezing the target, which prevents them from attacking until they thaw out.";
     }
 }
 
