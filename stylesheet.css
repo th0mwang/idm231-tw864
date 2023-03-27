@@ -7,6 +7,12 @@ h1{
     font-size: 450%;
     text-align: center;
 }
+p{
+    color: beige;
+    font-family: 'a Big Deal', sans-serif;
+    font-weight: bold;
+    text-align: center;    
+}
 p1{
     color: beige;
     font-family: 'a Big Deal', sans-serif;
